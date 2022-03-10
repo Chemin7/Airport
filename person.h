@@ -24,6 +24,7 @@ class Person{
 
         ///Animation
         void queueUp(int);
+        static void queueOut(int);
 
 };
 
@@ -69,6 +70,17 @@ void Person::queueUp(int x)
 
     this->pos=x;
 }
+
+void Person::queueOut(int x)
+{
+
+    gotoxy(x,9);cout<<"      ";
+    gotoxy(x,10);cout<< "     ";
+    gotoxy(x,11); cout<< "     ";
+    gotoxy(x,12); cout<< "     ";
+
+}
+
 
 
 

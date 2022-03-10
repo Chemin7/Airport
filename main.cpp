@@ -32,6 +32,8 @@ int main() {
 
     people.showQueue();
 
+    people.getOutQueue();
+
 
 
 

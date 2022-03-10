@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1646884001 source:c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\main.cpp
+1646931551 source:c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\main.cpp
 	<iostream>
 	<windows.h>
 	<ctime>
 	"person.h"
 	"queue.h"
 
-1646885820 c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\person.h
+1646932881 c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\person.h
 	<random>
 	<chrono>
 	"gotoxy.h"
@@ -17,7 +17,7 @@
 	<windows.h>
 	<ctime>
 
-1646886721 c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\queue.h
+1646932923 c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\queue.h
 	"node.h"
 	"person.h"
 	"objects.h"
@@ -25,5 +25,5 @@
 1646883069 c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\node.h
 	"person.h"
 
-1646885046 c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\objects.h
+1646930974 c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\objects.h
 

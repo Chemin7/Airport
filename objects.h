@@ -1,6 +1,7 @@
 #ifndef OBJECTS_H_INCLUDED
 #define OBJECTS_H_INCLUDED
 
+
 class Objects{
 public:
     static void receptionist();

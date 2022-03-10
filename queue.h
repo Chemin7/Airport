@@ -27,7 +27,9 @@ class Queue {
 
         bool isEmpty();
 
+        ///Animation
         void showQueue();
+        void getOutQueue();
 
     };
 
@@ -106,5 +108,25 @@ void Queue::showQueue() {
 
     }
 
+
+void Queue::getOutQueue()
+{
+    Node* show(head);
+
+    int posH,posR;
+    while(!this->isEmpty()){
+        posH = this->getFront().pos;
+        posR = this->getLast().pos;
+        show=show->next;
+        this->dequeue();
+        show->data.queueUp(posH);
+        Person::queueOut(posR);
+         Sleep(100);
+
+    }
+
+
+
+}
 
 #endif // QUEUE_H_INCLUDED

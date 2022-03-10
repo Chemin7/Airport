@@ -32,7 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="gotoxy.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="node.h" />
+		<Unit filename="objects.h" />
+		<Unit filename="person.h" />
+		<Unit filename="queue.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
