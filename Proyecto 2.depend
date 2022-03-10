@@ -27,3 +27,32 @@
 
 1646930974 c:\users\user\onedrive - universidad de guadalajara\2do sem\sed1\proyecto 2\objects.h
 
+1646943348 source:c:\users\usuario\documents\proyectos\airport\main.cpp
+	<iostream>
+	<windows.h>
+	<ctime>
+	"person.h"
+	"queue.h"
+
+1646942487 c:\users\usuario\documents\proyectos\airport\person.h
+	<random>
+	<chrono>
+	"gotoxy.h"
+	"string"
+
+1646941864 c:\users\usuario\documents\proyectos\airport\gotoxy.h
+	<iostream>
+	<windows.h>
+	<ctime>
+
+1646944003 c:\users\usuario\documents\proyectos\airport\queue.h
+	"node.h"
+	"person.h"
+	"objects.h"
+	<iostream>
+
+1646938994 c:\users\usuario\documents\proyectos\airport\node.h
+	"person.h"
+
+1646938994 c:\users\usuario\documents\proyectos\airport\objects.h
+

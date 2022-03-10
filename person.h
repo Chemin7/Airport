@@ -18,8 +18,8 @@ class Person{
 
         Person();
         void setId(int);
-    void setName(std::string);
-    int pos;
+        void setName(std::string);
+        int pos;
 
 
         ///Animation
@@ -57,6 +57,7 @@ using namespace std;
 
 void Person::queueUp(int x)
 {
+    HideCursor();
     gotoxy(x,9);cout<<"   "<<id;
     gotoxy(x,10);cout<< "  o";
     gotoxy(x,11); cout<< " /| \\";
@@ -73,13 +74,15 @@ void Person::queueUp(int x)
 
 void Person::queueOut(int x)
 {
-
+    HideCursor();
     gotoxy(x,9);cout<<"      ";
     gotoxy(x,10);cout<< "     ";
     gotoxy(x,11); cout<< "     ";
     gotoxy(x,12); cout<< "     ";
 
 }
+
+
 
 
 

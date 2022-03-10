@@ -34,9 +34,6 @@ int main() {
 
     people.getOutQueue();
 
-
-
-
-    system("pause>>cls");
+    system("pause");
     return 0;
     }

@@ -3,130 +3,160 @@
 #include "node.h"
 #include "person.h"
 #include "objects.h"
+#include <iostream>
 
-class Queue {
-    private:
-        Node* head;
-        Node* rear;
-        int sizeQueue;
-        int id;
+class Queue
+{
+private:
+    Node* head;
+    Node* rear;
+    int sizeQueue;
+    int id;
 
 
-    public:
-        Queue() {
-            this->head =NULL;
-            this->rear = NULL;
-            sizeQueue=0;
-            id=0;
-            };
-
-        void enqueue(Person);
-        void dequeue();
-        Person getFront();
-        Person getLast();
-
-        bool isEmpty();
-
-        ///Animation
-        void showQueue();
-        void getOutQueue();
-
+public:
+    Queue()
+    {
+        this->head =NULL;
+        this->rear = NULL;
+        sizeQueue=0;
+        id=0;
     };
 
+    void enqueue(Person);
+    void dequeue();
+    Person getFront();
+    Person getLast();
 
-void Queue::enqueue(Person e) {
+    bool isEmpty();
+
+    ///Animation
+    void showQueue();
+    void getOutQueue();
+
+};
+
+
+void Queue::enqueue(Person e)
+{
     e.setId(++id);
 
     Node* ptr = new Node();
     ptr->data=e;
     ptr->next = NULL;
 
-    if(head == NULL) {
+    if(head == NULL)
+    {
         head=ptr;
         rear=ptr;
-        }
-    else {
+    }
+    else
+    {
         rear->next=ptr;
         rear=ptr;
-        }
-
-    sizeQueue++;
     }
 
-void Queue::dequeue() {
-    if(isEmpty()) {
+    sizeQueue++;
+}
+
+void Queue::dequeue()
+{
+    if(isEmpty())
+    {
         std::cout<<"La cola esta vacia"<<std::endl;
-        }
-    else if(head==rear) {
+    }
+    else if(head==rear)
+    {
         delete(head);
         head=NULL;
         rear=NULL;
-        }
-    else {
+    }
+    else
+    {
         Node* ptr=head;
         head=head->next;
         delete(ptr);
-        }
-
-    sizeQueue--;
     }
 
-Person Queue::getFront() {
+    sizeQueue--;
+}
+
+Person Queue::getFront()
+{
 
     return head->data;
 
-    }
+}
 
-Person Queue::getLast() {
+Person Queue::getLast()
+{
 
     return rear->data;
-    }
+}
 
-bool Queue::isEmpty() {
+bool Queue::isEmpty()
+{
     return head == NULL and rear == NULL;
-    }
+}
 
-void Queue::showQueue() {
+void Queue::showQueue()
+{
 
     Node* show = NULL;
     show = head;
     int limit(65);
 
-    while(show!=NULL) {
-        for(int i=0; i<limit; i++) {
+    while(show!=NULL)
+    {
+        for(int i=0; i<limit; i++)
+        {
             show->data.queueUp(i);
             ///******************
             Objects::receptionist();
-
             ///******************
             Sleep(20);//Velocidad
-            }
+        }
         limit-=5;
         show=show->next;
-        }
-
-
     }
+
+
+}
 
 
 void Queue::getOutQueue()
 {
     Node* show(head);
+    Node* last(rear);
 
     int posH,posR;
-    while(!this->isEmpty()){
-        posH = this->getFront().pos;
-        posR = this->getLast().pos;
-        show=show->next;
-        this->dequeue();
-        show->data.queueUp(posH);
-        Person::queueOut(posR);
-         Sleep(100);
-
+    posR = last->data.pos;
+    bool ban(true);
+    while(!this->isEmpty() and ban)
+    {
+        if(sizeQueue>1)
+        {
+            posH = this->getFront().pos;
+            show=show->next;
+            show->data.queueUp(posH);
+            this->dequeue();
+            Person::queueOut(posR);
+            posR+=5;
+            Sleep(100);
+        }
+        else{
+            ban=false;
+        }
     }
 
-
+    system("cls");
 
 }
+
+
+
+
+
+
 
 #endif // QUEUE_H_INCLUDED

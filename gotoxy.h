@@ -13,4 +13,12 @@ void gotoxy(int x,int y) {
     SetConsoleCursorPosition(hcon,dwPos);
     }
 
+void HideCursor(){
+    CONSOLE_CURSOR_INFO cursor;
+    cursor.bVisible=FALSE;
+    cursor.dwSize=sizeof(cursor);
+    HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleCursorInfo(handle,&cursor);
+    }
+
 #endif // GOTOXY_H_INCLUDED
