@@ -2,6 +2,7 @@
 #define QUEUE_H_INCLUDED
 #include "node.h"
 #include "person.h"
+#include "objects.h"
 
 class Queue {
     private:
@@ -33,6 +34,7 @@ class Queue {
 
 void Queue::enqueue(Person e) {
     e.setId(++id);
+
     Node* ptr = new Node();
     ptr->data=e;
     ptr->next = NULL;
@@ -86,17 +88,20 @@ void Queue::showQueue() {
 
     Node* show = NULL;
     show = head;
-    int limit(50);
+    int limit(65);
 
     while(show!=NULL) {
         for(int i=0; i<limit; i++) {
             show->data.queueUp(i);
-            Sleep(130);//Velocidad
+            ///******************
+            Objects::receptionist();
+
+            ///******************
+            Sleep(20);//Velocidad
             }
         limit-=5;
         show=show->next;
         }
-
 
 
     }

@@ -9,6 +9,7 @@ class Person{
     private:
         int id;
         int bags;
+
         std::string name;
         bool ban;
 
@@ -18,6 +19,7 @@ class Person{
         Person();
         void setId(int);
     void setName(std::string);
+    int pos;
 
 
         ///Animation
@@ -58,12 +60,14 @@ void Person::queueUp(int x)
     gotoxy(x,10);cout<< "  o";
     gotoxy(x,11); cout<< " /| \\";
 		if(ban){
-				gotoxy(x,12); cout<< " / ";
+            gotoxy(x,12); cout<< " / ";
 			ban=false;
 		}else{
 			gotoxy(x,12); cout<< "   \\";
 			ban=true;
 		}
+
+    this->pos=x;
 }
 
 
