@@ -38,6 +38,7 @@
 		<Unit filename="objects.h" />
 		<Unit filename="person.h" />
 		<Unit filename="queue.h" />
+		<Unit filename="validate.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
